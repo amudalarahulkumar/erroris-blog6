@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8fb" />
+  <meta name="description" content="Explore the real side of entrepreneurship: learning through experiments, feedback, setbacks, teamwork, and the E-Cell journey." />
+  <meta property="og:title" content="Your First Pitch: Make People Understand Your Idea — E-Cell Journal" />
+  <meta property="og:description" content="Explain the problem, show the value, and give your audience a clear reason to care." />
+  <meta property="og:type" content="article" />
+  <title>Your First Pitch: Make People Understand Your Idea | E-Cell Journal</title>
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --paper: #ffffff;
+      --ink: #172033;
+      --muted: #647087;
+      --line: #e4e8f0;
+      --blue: #2859d6;
+      --blue-dark: #173b9c;
+      --blue-soft: #eaf0ff;
+      --max: 1120px;
+      --article: 740px;
+      --radius: 22px;
+      --shadow: 0 18px 55px rgba(25, 42, 80, .07);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+
+    .topbar {
+      border-bottom: 1px solid rgba(228, 232, 240, .9);
+      background: rgba(247, 248, 251, .88);
+    }
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-size: .94rem;
+      font-weight: 800;
+      letter-spacing: -.035em;
+    }
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--blue);
+      border-radius: 12px;
+      font-size: .88rem;
+      letter-spacing: -.06em;
+    }
+    .nav-label {
+      color: var(--muted);
+      font-size: .84rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .nav-label:hover { color: var(--blue); }
+
+    .hero {
+      padding: 74px 0 44px;
+    }
+    .hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 12px;
+      border: 1px solid #dce5ff;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue-dark);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+    h1 {
+      max-width: 850px;
+      margin: 25px auto 18px;
+      font-size: clamp(2.55rem, 6.3vw, 5.1rem);
+      line-height: 1.04;
+      letter-spacing: -.075em;
+      font-weight: 850;
+    }
+    .subtitle {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.22rem);
+      line-height: 1.7;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px 16px;
+      margin-top: 27px;
+      color: var(--muted);
+      font-size: .83rem;
+      font-weight: 600;
+    }
+    .meta span + span::before {
+      content: "·";
+      margin-right: 16px;
+      color: #a4adbd;
+    }
+
+    .cover {
+      position: relative;
+      overflow: hidden;
+      min-height: 280px;
+      max-height: 410px;
+      aspect-ratio: 2.25 / 1;
+      margin: 12px auto 0;
+      border: 1px solid #e7bdb5;
+      border-radius: var(--radius);
+      background:
+        radial-gradient(circle at 78% 23%, rgba(255,255,255,.95) 0 5%, transparent 5.4%),
+        radial-gradient(circle at 78% 23%, rgba(255,255,255,.22) 0 13%, transparent 13.5%),
+        linear-gradient(130deg, #843f3b 0%, #c9776d 52%, #e8ada0 100%);
+      box-shadow: var(--shadow);
+    }
+    .cover::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      right: -80px;
+      top: -240px;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 50%;
+      box-shadow: 0 0 0 35px rgba(255,255,255,.055), 0 0 0 75px rgba(255,255,255,.045), 0 0 0 120px rgba(255,255,255,.035);
+    }
+    .cover::after {
+      content: "";
+      position: absolute;
+      width: 56%;
+      height: 2px;
+      right: 8%;
+      bottom: 23%;
+      transform: rotate(-26deg);
+      transform-origin: right center;
+      background: rgba(255,255,255,.55);
+    }
+    .cover-art {
+      position: absolute;
+      right: 16%;
+      top: 17%;
+      width: 170px;
+      height: 170px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.52);
+      border-radius: 50%;
+      background: rgba(255,255,255,.1);
+      backdrop-filter: blur(5px);
+    }
+    .cover-art svg { width: 94px; height: 94px; }
+    .cover-caption {
+      position: absolute;
+      z-index: 1;
+      left: clamp(24px, 5.5vw, 62px);
+      bottom: clamp(25px, 5vw, 54px);
+      color: #fff;
+    }
+    .cover-caption small {
+      display: block;
+      margin-bottom: 8px;
+      font-size: .74rem;
+      font-weight: 800;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.72);
+    }
+    .cover-caption strong {
+      display: block;
+      max-width: 460px;
+      font-size: clamp(1.55rem, 3.6vw, 2.8rem);
+      line-height: 1.1;
+      letter-spacing: -.055em;
+    }
+
+    .article-shell {
+      display: grid;
+      grid-template-columns: minmax(0, var(--article)) 220px;
+      gap: 46px;
+      align-items: start;
+      justify-content: center;
+      padding: 58px 0 88px;
+    }
+    article {
+      min-width: 0;
+      padding: clamp(25px, 5vw, 58px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 10px 35px rgba(25, 42, 80, .035);
+    }
+    .intro {
+      margin: 0 0 30px;
+      padding: 0 0 28px;
+      border-bottom: 1px solid var(--line);
+      color: #34415a;
+      font-size: 1.13rem;
+      line-height: 1.85;
+    }
+    .intro strong { color: var(--ink); }
+    h2 {
+      margin: 38px 0 13px;
+      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+      line-height: 1.25;
+      letter-spacing: -.045em;
+    }
+    article p {
+      margin: 0 0 17px;
+      color: #465168;
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+    .pullquote {
+      margin: 34px 0;
+      padding: 23px 25px;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 14px 14px 0;
+      background: #f2f5ff;
+      color: #203c84;
+      font-size: 1.12rem;
+      font-weight: 750;
+      line-height: 1.65;
+      letter-spacing: -.02em;
+    }
+    .end-note {
+      margin-top: 36px;
+      padding-top: 25px;
+      border-top: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 1.08rem;
+      font-weight: 750;
+      line-height: 1.8;
+    }
+
+    aside {
+      position: sticky;
+      top: 28px;
+      padding-top: 8px;
+    }
+    .side-card {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.75);
+    }
+    .side-title {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 850;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .toc { margin: 0; padding: 0; list-style: none; }
+    .toc li { margin: 0; }
+    .toc a {
+      display: block;
+      padding: 8px 0;
+      color: #4d5870;
+      font-size: .86rem;
+      line-height: 1.4;
+      text-decoration: none;
+    }
+    .toc a:hover { color: var(--blue); }
+    .side-divider { height: 1px; margin: 18px 0; background: var(--line); }
+    .side-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: .86rem;
+      line-height: 1.7;
+    }
+
+    .bottom-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 22px;
+      padding: 27px 30px;
+      border-radius: 18px;
+      background: #172b5d;
+      color: #fff;
+    }
+    .bottom-cta h2 {
+      margin: 0 0 5px;
+      font-size: 1.25rem;
+    }
+    .bottom-cta p {
+      margin: 0;
+      color: rgba(255,255,255,.72);
+      font-size: .9rem;
+    }
+    .back-top {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 15px;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 999px;
+      color: #fff;
+      font-size: .85rem;
+      font-weight: 750;
+      text-decoration: none;
+    }
+    .back-top:hover { background: rgba(255,255,255,.1); }
+
+    footer {
+      padding: 26px 0 34px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .82rem;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+    .footer-brand { color: var(--ink); font-weight: 800; }
+    .reading-progress {
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: var(--blue);
+    }
+
+    @media (max-width: 900px) {
+      .article-shell { grid-template-columns: minmax(0, var(--article)); }
+      aside { position: static; order: -1; }
+      .side-card { padding: 17px 20px; }
+      .toc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 20px; }
+      .side-divider, .side-note { display: none; }
+    }
+    @media (max-width: 600px) {
+      .wrap { width: min(100% - 28px, var(--max)); }
+      .nav { min-height: 66px; }
+      .nav-label { font-size: .78rem; }
+      .hero { padding: 48px 0 28px; }
+      h1 { margin-top: 20px; }
+      .meta { gap: 7px 10px; font-size: .76rem; }
+      .meta span + span::before { margin-right: 10px; }
+      .cover { min-height: 270px; aspect-ratio: 1.15 / 1; }
+      .cover-art { width: 120px; height: 120px; right: 9%; top: 13%; }
+      .cover-art svg { width: 70px; height: 70px; }
+      .cover-caption { left: 22px; bottom: 24px; }
+      .cover-caption strong { max-width: 250px; }
+      .article-shell { padding: 34px 0 58px; gap: 20px; }
+      article { padding: 25px 21px; border-radius: 18px; }
+      .intro { font-size: 1.04rem; }
+      article p { font-size: .97rem; }
+      .toc { grid-template-columns: 1fr; }
+      .toc a { padding: 6px 0; }
+      .bottom-cta { align-items: flex-start; flex-direction: column; padding: 23px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  .example-grid{display:grid;gap:14px;margin:24px 0}.example{padding:20px;border:1px solid var(--line);border-radius:14px;background:#f7f9ff}.example h3{margin:0 0 8px;font-size:1.05rem;line-height:1.4}.example p{margin:0}h2{scroll-margin-top:24px}@media(max-width:400px){.nav{gap:10px}.brand{font-size:.88rem;gap:8px}.brand-mark{width:30px;height:30px}.nav-label{font-size:.68rem}} </style>
+</head>
+<body id="top">
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Team Erroris — E-Cell Journal">
+        <span class="brand-mark">E</span>
+        <span>Team Erroris</span>
+      </a>
+      <a class="nav-label" href="#article" style="color:var(--blue-dark);font-weight:800">NEC ID: NEC2683357</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap" aria-labelledby="page-title">
+      <div class="hero-inner">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Blog 06 · Entrepreneurship</span>
+        <h1 id="page-title">Your First Pitch: Make People Understand Your Idea</h1>
+        <p class="subtitle">Explain the problem, show the value, and give your audience a clear reason to care.</p>
+        <div class="meta" aria-label="Article details">
+          <span>E-Cell Blog Series</span>
+          <span>Student Innovation</span>
+          <span>Learning &amp; Growth</span>
+        </div>
+      </div>
+
+      <div class="cover" role="img" aria-label="Muted coral illustration representing a clearly communicated idea">
+        <div class="cover-art" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none">
+            <path d="M50 13v10M50 77v10M13 50h10M77 50h10M24 24l7 7M69 69l7 7M76 24l-7 7M31 69l-7 7" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity=".75"/>
+            <path d="M35 43a15 15 0 1 1 30 0c0 6-3 9-7 13-2 2-3 4-3 7H45c0-3-1-5-3-7-4-4-7-7-7-13Z" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M45 70h10M46 76h8" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            <path d="m43 43 5 5 10-11" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="cover-caption">
+          <small>Problem · Value · Next Step</small>
+          <strong>A clear idea deserves a clear pitch.</strong>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap article-shell">
+      <article id="article"><p class="intro">You may understand your idea perfectly and still struggle to explain it. Your audience has not followed every conversation, experiment, and decision that brought you here. <strong>A good first pitch helps people understand the problem, your proposed solution, and what you need next.</strong></p>
+<p>Pitching is a communication skill you can practise. You do not need complicated language or dramatic promises. You need a clear structure, relevant evidence, and an honest account of what you have built or hope to test.</p>
+<h2 id="audience">1. Understand Who You Are Speaking To</h2>
+<p>A potential customer wants to know how your offer helps them. A competition judge may examine feasibility and differentiation. A mentor may need to understand your assumptions before suggesting a next step.</p>
+<p>Keep the core idea consistent, but choose details that answer your audience’s questions. Check any presentation requirements and make your request appropriate to the setting. Do not assume every pitch needs to ask for investment.</p>
+<h2 id="problem">2. Open With a Specific Problem</h2>
+<p>Identify who experiences the problem and what makes it difficult. “Students need better services” is broad. “Students looking for used course books struggle to find available copies because listings are scattered across different groups” gives the audience something concrete to understand.</p>
+<p>You can begin with a short example, but distinguish a hypothetical scenario from a real experience. If you use a customer’s story, protect their privacy and get permission where appropriate.</p>
+<div class="pullquote">Make the problem clear enough that your audience can understand why the solution matters.</div>
+<h2 id="solution">3. Explain the Solution in Plain Language</h2>
+<p>Describe what your product or service does and how someone uses it. Avoid listing every feature. Lead with the action that solves the problem.</p>
+<p>For a used-book directory, you might say: “Students can list available books and search for the course books they need in one organised directory.” Then explain how buyers contact sellers and how availability is kept accurate.</p>
+<p>A simple screen, sample, or demonstration can help, but it should support the explanation. Make clear whether you are showing a concept, a prototype, or a working service.</p>
+<h2 id="value">4. Show Why Someone Would Choose It</h2>
+<p>Your idea will compete with what people already do, even if they currently use a group chat, a spreadsheet, or a manual process. Explain what your approach improves and why that improvement matters to the user.</p>
+<p>Be specific without exaggerating. A claim such as “organises listings by course and shows availability” is clearer than “revolutionises student life.” Claims about savings or performance need evidence from an appropriate test.</p>
+<p>Briefly explain how delivery could work and who might pay. If the business model is still an assumption, say so. A clear unanswered question is more credible than an invented answer.</p>
+<h2 id="evidence">5. Use Evidence You Actually Have</h2>
+<p>Describe what you have learned from user conversations, a prototype, or a small trial. Explain what the evidence supports and what it does not establish.</p>
+<p>For example, interest in a demo does not prove willingness to pay. A completed purchase is useful evidence, but one purchase does not establish a large market. Give the audience enough context to interpret your results.</p>
+<p>If you have not tested the idea yet, explain your planned experiment and what you want to learn. Avoid presenting forecasts as actual revenue or invented figures as research.</p>
+<h2 id="structure">6. Build a Clear Pitch Structure</h2>
+<p>Use the following outline as a guide. Adjust it to the requirements of your audience rather than treating it as a script you must follow word for word.</p>
+<div class="example-grid">
+<div class="example"><h3>The problem and the people</h3><p>Who experiences the issue? What happens, and why does it matter?</p></div>
+<div class="example"><h3>The solution and its value</h3><p>What are you proposing? How does it work, and why would someone choose it?</p></div>
+<div class="example"><h3>The evidence and practical plan</h3><p>What have you learned? What remains uncertain? How could the solution be delivered?</p></div>
+<div class="example"><h3>The team and the request</h3><p>Why is your team suited to the next step? Are you seeking feedback, a trial partner, introductions, or another specific form of support?</p></div>
+</div>
+<p>End with a request the listener can act on. “We are looking for a student club willing to test the prototype” gives clearer direction than “Please support our idea.”</p>
+<h2 id="practice">7. Practise for Understanding, Not Just Delivery</h2>
+<p>Try your pitch with someone unfamiliar with the project. Ask them to explain the idea back to you. If they cannot identify the user, problem, or proposed solution, revise the explanation.</p>
+<p>Prepare for questions about alternatives, costs, feasibility, and evidence. Listen to the full question before answering. If you do not know, acknowledge the gap and explain how you would investigate it.</p>
+<p>For Team Erroris, E-Cell pitching activities offer a chance to practise this approach: explain clearly, listen carefully, and use feedback to strengthen both the presentation and the idea behind it.</p>
+<p class="end-note">A strong first pitch gives people a clear understanding of your idea and an honest reason to consider the next step. Clarity earns attention; evidence helps build trust.</p>
+<div class="bottom-cta"><div><h2>Make your idea easy to understand.</h2><p>One clear problem. One useful solution. One specific request.</p></div><a class="back-top" href="#top">Back to top ↑</a></div></article>
+
+      <aside aria-label="Article navigation">
+        <div class="side-card">
+          <p class="side-title">In this article</p>
+          <ul class="toc"><li><a href="#audience">Know Your Audience</a></li><li><a href="#problem">Explain the Problem</a></li><li><a href="#solution">Describe the Solution</a></li><li><a href="#value">Show the Value</a></li><li><a href="#evidence">Use Honest Evidence</a></li><li><a href="#structure">Structure Your Pitch</a></li><li><a href="#practice">Practise and Improve</a></li></ul>
+          <div class="side-divider"></div
